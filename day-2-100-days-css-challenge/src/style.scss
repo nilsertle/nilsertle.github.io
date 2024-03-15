@@ -1,0 +1,171 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: #3faf82;
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	gap: 14px;
+	flex-direction: column;
+}
+
+.center > div {
+	background-color: white;
+}
+
+.line {
+	width: 80px;
+	height: 8px;
+	border-radius: 4px;
+	background-color: inherit;
+	box-shadow: -1px 3px 7px rgba(0, 0, 0, 0.3);
+	animation-direction: normal;
+}
+
+@keyframes disappear {
+	100% {
+		opacity: 0%;
+		transform: scale(0);
+	}
+}
+
+@keyframes fade-down {
+	0% {
+		transform: translateY(0px); /* NEW */
+	}
+
+	50% {
+		transform: translateY(20px);
+	}
+
+	100% {
+		transform: translate3d(0, 22px, 0) rotate(45deg);
+	}
+}
+
+@keyframes fade-up {
+	0% {
+		transform: translateY(0px); /* NEW */
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translate3d(0, -22px, 0) rotate(135deg);
+	}
+}
+
+.rev {
+	animation-direction: reverse;
+}
+
+@keyframes disappear-rev {
+	0% {
+		opacity: 0%;
+		transform: scale(0);
+	}
+}
+
+@keyframes fade-down-rev {
+	0% {
+		transform: translate3d(0, 22px, 0) rotate(45deg);
+	}
+
+	50% {
+		transform: translateY(20px);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0) rotate(0);
+	}
+}
+
+@keyframes fade-up-rev {
+	0% {
+		transform: translate3d(0, -22px, 0) rotate(135deg);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0) rotate(0deg);
+	}
+}
+
+.no-animation {
+	-webkit-animation: none !important;
+          animation: none !important; 
+}
+
+.center {
+	cursor: pointer;
+
+	.one {
+		animation-name: fade-down-rev;
+		animation-duration: 0.7s;
+		animation-timing-function: ease-in-out;
+		transform-origin: center center;
+	}
+
+	.two {
+		animation-name: disappear-rev;
+		animation-duration: 0.7s;
+	}
+
+	.three {
+		animation-name: fade-up-rev;
+		animation-duration: 0.7s;
+		animation-timing-function: ease-in-out;
+		transform-origin: center center;
+	}
+	&.active {
+		.one {
+			animation-name: fade-down;
+			animation-duration: 0.7s;
+			animation-timing-function: ease-in-out;
+			transform-origin: center center;
+			animation-fill-mode: forwards;
+		}
+
+		.two {
+			animation-name: disappear;
+			animation-duration: 0.7s;
+			animation-fill-mode: forwards;
+		}
+
+		.three {
+			animation-name: fade-up;
+			animation-duration: 0.7s;
+			animation-timing-function: ease-in-out;
+			transform-origin: center center;
+			animation-fill-mode: forwards;
+		}
+	}
+}
