@@ -1,0 +1,197 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: linear-gradient(
+		45deg,
+		rgba(237, 187, 107, 1) 0%,
+		rgba(203, 125, 78, 1) 100%
+	);
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.name-area {
+	grid-area: name;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.portrait {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.img-container {
+	margin-bottom: 16px;
+	width: 82px;
+	height: 82px;
+	border-radius: 50%;
+	position: relative;
+	cursor: pointer;
+}
+
+.circle-1 {
+	width: 82px;
+	height: 82px;
+	border-radius: 50%;
+	border-right: 1px solid #786451;
+	border-top: 1px solid #786451;
+	border-bottom: 1px solid #786451;
+	border-left: 1px solid transparent;
+	position: absolute;
+	padding: 3px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 2s ease-in-out;
+}
+
+.circle-2 {
+	width: 82px;
+	height: 82px;
+	border-radius: 50%;
+	border-left: 1px solid #786451;
+	border-top: 1px solid #786451;
+	border-bottom: 1px solid #786451;
+	border-right: 1px solid transparent;
+	position: absolute;
+	padding: 7px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 2s ease-in-out;
+}
+
+.img-container:hover {
+	.circle-1 {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+
+	.circle-2 {
+		transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+
+.name {
+}
+
+.role {
+	margin-bottom: 25px;
+}
+
+.posts-area {
+	grid-area: posts;
+}
+
+.likes-area {
+	grid-area: likes;
+}
+
+.followers-area {
+	grid-area: followers;
+}
+
+.posts-area,
+.likes-area,
+.followers-area {
+	background-color: #f5e8df;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	&:hover {
+		background-color: #e6d5cb;
+		transition: background-color 0.7s;
+	}
+}
+
+.grid {
+	display: grid;
+	width: 320px;
+	height: 300px;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: white;
+	box-shadow: 5px 5px 20px -2px;
+	grid-template-columns: 65% 35%;
+	grid-template-rows: 1/3 1/3 1/3;
+	row-gap: 2px;
+	grid-template-areas:
+		"name posts"
+		"name likes"
+		"name followers";
+}
+
+.button-1 {
+	margin-bottom: 10px;
+}
+
+p,
+h2,
+h3,
+h4 {
+	margin: 0;
+	padding: 0;
+	color: #786451;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+
+p {
+	font-size: 0.65rem;
+}
+
+.button {
+	padding: 8px 0px;
+	width: 130px;
+	border-radius: 100px;
+	border: 1px solid #786451;
+	background: none;
+	&:hover {
+		background-color: #786451;
+		h4 {
+			color: white;
+			transition: color 0.7s;
+		}
+		transition: background-color 0.7s;
+	}
+}
