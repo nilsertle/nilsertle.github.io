@@ -1,0 +1,325 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #000;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(25);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle1 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 54% 57%;
+  -webkit-animation: rotate 4s ease-in-out 0.3333333333s infinite;
+          animation: rotate 4s ease-in-out 0.3333333333s infinite;
+  filter: blur(5px);
+}
+
+.circle2 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 42% 55%;
+  -webkit-animation: rotate 4s ease-in-out 0.6666666667s infinite;
+          animation: rotate 4s ease-in-out 0.6666666667s infinite;
+  filter: blur(5px);
+}
+
+.circle3 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 61% 59%;
+  -webkit-animation: rotate 4s ease-in-out 1s infinite;
+          animation: rotate 4s ease-in-out 1s infinite;
+  filter: blur(5px);
+}
+
+.circle4 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 53% 58%;
+  -webkit-animation: rotate 4s ease-in-out 1.3333333333s infinite;
+          animation: rotate 4s ease-in-out 1.3333333333s infinite;
+  filter: blur(5px);
+}
+
+.circle5 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 46% 51%;
+  -webkit-animation: rotate 4s ease-in-out 1.6666666667s infinite;
+          animation: rotate 4s ease-in-out 1.6666666667s infinite;
+  filter: blur(5px);
+}
+
+.circle6 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 45% 45%;
+  -webkit-animation: rotate 4s ease-in-out 2s infinite;
+          animation: rotate 4s ease-in-out 2s infinite;
+  filter: blur(5px);
+}
+
+.circle7 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 44% 58%;
+  -webkit-animation: rotate 4s ease-in-out 2.3333333333s infinite;
+          animation: rotate 4s ease-in-out 2.3333333333s infinite;
+  filter: blur(5px);
+}
+
+.circle8 {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 44% 59%;
+  -webkit-animation: rotate 4s ease-in-out 2.6666666667s infinite;
+          animation: rotate 4s ease-in-out 2.6666666667s infinite;
+  filter: blur(5px);
+}
+
+.sparkle1 {
+  width: 21.03px;
+  height: 21.03px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 39px -31px;
+  -webkit-animation: rotate 5s ease-in-out 0.2s infinite;
+          animation: rotate 5s ease-in-out 0.2s infinite;
+  filter: blur(5px);
+}
+
+.sparkle2 {
+  width: 20.06px;
+  height: 20.06px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: -9px -63px;
+  -webkit-animation: rotate 5s ease-in-out 0.4s infinite;
+          animation: rotate 5s ease-in-out 0.4s infinite;
+  filter: blur(5px);
+}
+
+.sparkle3 {
+  width: 19.09px;
+  height: 19.09px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 60px 39px;
+  -webkit-animation: rotate 5s ease-in-out 0.6s infinite;
+          animation: rotate 5s ease-in-out 0.6s infinite;
+  filter: blur(5px);
+}
+
+.sparkle4 {
+  width: 18.12px;
+  height: 18.12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: -35px 39px;
+  -webkit-animation: rotate 5s ease-in-out 0.8s infinite;
+          animation: rotate 5s ease-in-out 0.8s infinite;
+  filter: blur(5px);
+}
+
+.sparkle5 {
+  width: 17.15px;
+  height: 17.15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 16px -27px;
+  -webkit-animation: rotate 5s ease-in-out 1s infinite;
+          animation: rotate 5s ease-in-out 1s infinite;
+  filter: blur(5px);
+}
+
+.sparkle6 {
+  width: 16.18px;
+  height: 16.18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 44px -9px;
+  -webkit-animation: rotate 5s ease-in-out 1.2s infinite;
+          animation: rotate 5s ease-in-out 1.2s infinite;
+  filter: blur(5px);
+}
+
+.sparkle7 {
+  width: 15.21px;
+  height: 15.21px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 3px -63px;
+  -webkit-animation: rotate 5s ease-in-out 1.4s infinite;
+          animation: rotate 5s ease-in-out 1.4s infinite;
+  filter: blur(5px);
+}
+
+.sparkle8 {
+  width: 14.24px;
+  height: 14.24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 19px -65px;
+  -webkit-animation: rotate 5s ease-in-out 1.6s infinite;
+          animation: rotate 5s ease-in-out 1.6s infinite;
+  filter: blur(5px);
+}
+
+.sparkle9 {
+  width: 13.27px;
+  height: 13.27px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 54px 70px;
+  -webkit-animation: rotate 5s ease-in-out 1.8s infinite;
+          animation: rotate 5s ease-in-out 1.8s infinite;
+  filter: blur(5px);
+}
+
+.sparkle10 {
+  width: 12.3px;
+  height: 12.3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform-origin: 29px 66px;
+  -webkit-animation: rotate 5s ease-in-out 2s infinite;
+          animation: rotate 5s ease-in-out 2s infinite;
+  filter: blur(5px);
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
