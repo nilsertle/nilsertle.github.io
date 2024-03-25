@@ -1,0 +1,295 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,500,400,300,200,100);
+
+// use only the available space inside the 400x400 frame
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: #fff;
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p,
+h2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	color: #384568;
+	font-size: 0.93rem;
+	font-weight: 300;
+}
+
+h2 {
+	color: #384568;
+	font-size: 2.8rem;
+	font-weight: 300;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+}
+
+.background {
+	height: 78%;
+	background-color: #1a2238;
+	overflow: hidden;
+	position: relative;
+}
+
+.cloud1 {
+	position: absolute;
+	top: 135%;
+	left: 25%;
+	width: 100%;
+
+	.circle1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-75%, -65%);
+		width: 340px;
+		height: 340px;
+		background-color: #2f3c5e;
+		border-radius: 50%;
+	}
+	.circle2 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-160%, -70%);
+		width: 250px;
+		height: 250px;
+		background-color: #2f3c5e;
+		border-radius: 50%;
+	}
+	.circle3 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-5%, -75%);
+		width: 200px;
+		height: 200px;
+		background-color: #2f3c5e;
+		border-radius: 50%;
+	}
+}
+
+.cloud2 {
+	position: absolute;
+	top: 120%;
+	left: 25%;
+	width: 100%;
+
+	.circle2 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-110%, -55%);
+		width: 350px;
+		height: 350px;
+		background-color: #26314f;
+		border-radius: 50%;
+	}
+	.circle3 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%, -60%);
+		width: 350px;
+		height: 350px;
+		background-color: #26314f;
+		border-radius: 50%;
+	}
+}
+
+.moon {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: #f6edbd;
+	position: absolute;
+	top: 50px;
+	left: 60px;
+	overflow: hidden;
+	animation: appear 1s ease-out forwards;
+	filter: drop-shadow(0 0px 10px #f6edbd) brightness(103%);
+	@for $i from 1 through 7 {
+		.circle#{$i} {
+			width: 3px + $i;
+			height: 3px + $i;
+			border-radius: 50%;
+			background-color: #ece1a8;
+			position: absolute;
+			top: 0;
+			left: 0;
+			box-shadow: inset 0 0 2px #ddcc86;
+			opacity: 0.7;
+		}
+	}
+	.circle1 {
+		transform: translate(10px, 40px);
+	}
+	.circle2 {
+		transform: translate(20px, 30px);
+	}
+	.circle3 {
+		transform: translate(40px, 55px);
+	}
+	.circle4 {
+		transform: translate(50px, 20px);
+	}
+	.circle5 {
+		transform: translate(30px, 15px);
+	}
+	.circle6 {
+		transform: translate(35px, 35px);
+	}
+	.circle7 {
+		transform: translate(10px, 15px);
+	}
+}
+
+@keyframes appear {
+	from {
+		transform: translate(-100px, 400px);
+	}
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+.rain {
+	@for $i from 1 through 20 {
+		.drop-#{$i} {
+			width: 10px;
+			height: 10px;
+			border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+			transform: rotate(-28deg);
+			background-color: #80c1f9;
+			position: absolute;
+			left: random(600) - 100px;
+			top: -50px;
+			animation: raining (.5 + ((($i - 0) / (20 - 0)) * (10 - 1) + 1) / 10) + s linear $i/5 + s infinite;
+		}
+	}
+	@for $i from 21 through 40 {
+		.drop-#{$i} {
+			width: 7px;
+			height: 7px;
+			border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+			transform: rotate(-28deg);
+			background-color: #5881ac;
+			position: absolute;
+			left: random(600) - 100px;
+			top: -50px;
+
+			animation: raining
+				(1 + ((($i - 21) / (40 - 21)) * (10 - 1) + 1) / 10) +
+				s
+				linear
+				($i - 17)/6 +
+				s
+				infinite;
+		}
+	}
+	@for $i from 41 through 50 {
+		.drop-#{$i} {
+			width: 8.5px;
+			height: 8.5px;
+			border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+			transform: rotate(-28deg);
+			background-color: #5f8cbb;
+			position: absolute;
+			left: random(600) - 100px;
+			top: -50px;
+			animation: raining
+				(0.7 + ((($i - 41) / (50 - 41)) * (10 - 1) + 1) / 10) +
+				s
+				linear
+				($i - 36)/5.7 +
+				s
+				infinite;
+		}
+	}
+	@for $i from 51 through 70 {
+		.drop-#{$i} {
+			width: 10px;
+			height: 10px;
+			border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+			transform: rotate(-28deg);
+			background-color: #80c1f9;
+			position: absolute;
+			left: random(600) - 100px;
+			top: -50px;
+			animation: raining
+				(0.6 + ((($i - 51) / (70 - 51)) * (10 - 1) + 1) / 10) +
+				s
+				linear
+				((($i - 51) / (100 - 51)) * (10 - 1) + 1)/3 +
+				s
+				infinite;
+		}
+	}
+}
+
+@keyframes raining {
+	0% {
+		transform: translate(70px, 0) rotate(-28deg);
+	}
+
+	80% {
+		transform: translate(15px, 352px) rotate(-28deg) scaleX(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0px, 365px) rotate(-45deg) scale(15);
+		transform-origin: 100% -10%;
+		opacity: 0;
+	}
+}
+
+.data {
+	height: 22%;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+
+.wind-hum {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.temp-container {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.temps {
+	text-align: end;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
