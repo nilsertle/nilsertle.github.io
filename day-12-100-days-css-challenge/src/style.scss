@@ -1,0 +1,106 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400,300,200,100);
+
+// use only the available space inside the 400x400 frame
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	background: #4bb6de;
+	color: #fff;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+blockquote {
+	font-size: 1.5rem;
+	font-weight: 400;
+	position: relative;
+	margin: 30px;
+	line-height: 2.2rem;
+
+	&::before {
+		content: "\201F";
+		position: absolute;
+		top: 21%;
+		left: -6%;
+		transform: scaleX(-1);
+		font-size: 15rem;
+		opacity: 0.2;
+	}
+
+	&::after {
+		content: "Albert Einstein";
+		position: absolute;
+		bottom: -45px;
+		left: 0px;
+		font-size: 1.2rem;
+		font-weight: 200;
+		font-style: italic;
+	}
+
+	.info {
+		background-color: #286f8a;
+		padding: 2px 8px;
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+
+		.tooltip {
+			display: block;
+			position: absolute;
+			box-sizing: border-box;
+			visibility: hidden;
+			bottom: 55px;
+			left: -85px;
+			width: 300px;
+			background-color: #286f8a;
+transition: all .3s linear;
+			opacity: 0;
+
+			.header {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 10px;
+				background-color: #fff;
+				width: 100%;
+				color: #286f8a;
+				padding: 12px;
+				box-sizing: border-box;
+			}
+
+			p {
+				margin: 0;
+				font-size: 1rem;
+				line-height: 1rem;
+			}
+			
+			.info-text {
+				padding: 12px;
+				line-height: 1.5rem;
+			}
+		}
+
+		&:hover > .tooltip {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
